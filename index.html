@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Advice generator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'light-cyan': 'hsl(193, 38%, 86%)',
+            'neon-green': 'hsl(150, 100%, 66%)',
+            'grayish-blue:': 'hsl(217, 19%, 38%)',
+            'dark-grayish-blue': 'hsl(217, 19%, 24%)',
+            'dark-blue': 'hsl(218, 23%, 16%)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-blue grid place-content-center min-h-screen text-light-cyan p-[5%]">
+  <div class="bg-dark-grayish-blue p-16 pb-24 rounded-3xl text-center font-[800] flex flex-col items-center gap-3 relative shadow-xl max-w-[550px] gap-6">
+    <p class="text-neon-green tracking-[5px]">
+      ADVICE #<span id="advice-num">117</span>
+    </p>
+    <p class="text-[28px]  mb-5 ">
+      "<span id="advice" >
+        It is easy to sit up and take notice, what's difficult is getting up and taking action.
+      </span>"
+    </p>
+    <picture>
+      <source media="(min-width: 480px)" srcset="./images/pattern-divider-desktop.svg">
+      <img src="./images/pattern-divider-mobile.svg" alt="IfItDoesntMatchAnyMedia">
+    </picture>
+    <button id="get-advice-btn" class="rounded-full bg-neon-green grid place-content-center w-[64px] h-[64px] absolute bottom-[-32px] left-[50%] -translate-x-[50%] shadow-xl hover:shadow-[0_0px_40px_-5px_rgba(0,0,0,0.3)] hover:shadow-neon-green">
+      <img src="./images/icon-dice.svg"/>
+    </button>
+  </div>
+  <div class="attribution mt-20">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/bap-ssbm">Kentaro Oshimoto</a>.
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
